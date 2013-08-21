@@ -1,0 +1,1 @@
+assert_equal ([:r, :u, :b, :e, :q, :u, :e] arr.values_at(2,4)), [:b, :q]

@@ -1,6 +1,7 @@
 class Array
   def flatten
-    ___
+    self.length.times {self.flatten!}
+    self
   end
 end
 

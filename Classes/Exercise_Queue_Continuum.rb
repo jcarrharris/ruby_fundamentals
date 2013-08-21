@@ -1,7 +1,20 @@
 class Queue
-  ___
+  def initialize(queue)
+      	@queue = queue
 end
+def pop(*n)
+    	@queue.shift(*n)
+	end
 
+	def push(items)
+    	@queue.push(*items)
+    	true
+	end
+
+	def to_a
+    	@queue
+	end
+end
 queue = Queue.new([5, 6, 7, 8])
 
 assert_equal queue.pop, 5

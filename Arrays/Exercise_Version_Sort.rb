@@ -1,8 +1,20 @@
 class Array
   def version_sort
-    ___
+    def to_array(s)
+      a = s.scan(/(\d+)([a-z]*)/).flatten 
+      a.each_with_index.map {|e,i| i.even? ? e.to_i : e!="" ? e : i==a.length-1 ? (?a.ord-1).chr : (?z.ord+1).chr}
+    end
+
+    return self.sort do |a,b|
+      am, bm = to_array(a), to_array(b)
+      len = [am.length, bm.length].min
+      cmp = 0
+      am[0,len].zip(bm[0,len]).each {|pair| break if (cmp = (pair.first<=>pair.last)) != 0}
+      cmp
+    end
   end
 end
+
 filenames = [
   "foo-1.10.2.ext",
   "foo-1.11.ext",

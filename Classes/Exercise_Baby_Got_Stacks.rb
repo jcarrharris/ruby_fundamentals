@@ -1,5 +1,20 @@
 class Stack
-  ___
+  def initialize(stack)
+      	@stack = stack
+  	end
+
+  	def pop(*n)
+      	@stack.pop(*n)
+  	end
+
+  	def push(items)
+      	@stack.push(*items.reverse)
+      	true
+  	end
+
+  	def to_a
+      	@stack
+  	end
 end
 
 stack = Stack.new([5, 6, 7, 8])

@@ -1,5 +1,5 @@
 def key_for_min_value(hash)
-  ___
+ hash.key(hash.values.min)
 end
 
 

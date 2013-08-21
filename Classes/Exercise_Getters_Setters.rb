@@ -1,5 +1,5 @@
 class Character
-  ___ :name, :quote
+  attr_accessor :name, :quote
 end
 
 thorin = Character.new

@@ -14,4 +14,4 @@ class Bar < Foo
   end
 end
 
-assert_equal Bar.new.say_name, "___"
+assert_equal Bar.new.say_name, "bar"
